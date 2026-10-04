@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>강의 소개</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+JP:wght@500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="petals" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">🌸</span>
+        <span class="brand-text">
+          <small data-bind="brandSub"></small>
+          <strong data-bind="site.courseName"></strong>
+        </span>
+      </a>
+      <button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="주 메뉴"></nav>
+      <button class="admin-lock" type="button" aria-label="관리자 화면 열기" title="관리자">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="badge" data-bind="hero.badge"></p>
+        <h1 class="hero-title" data-bind="site.courseName"></h1>
+        <p class="hero-jp" data-bind="site.courseNameJp"></p>
+        <p class="hero-subtitle" data-bind="hero.subtitle"></p>
+        <p class="hero-lead" data-bind="hero.description"></p>
+        <div class="hero-buttons"></div>
+      </div>
+      <div class="container">
+        <dl class="quick-info"></dl>
+      </div>
+    </section>
+
+    <section class="notice-section" id="notice" hidden></section>
+    <section class="section" id="about"></section>
+    <section class="section alt" id="poll"></section>
+    <section class="section" id="curriculum"></section>
+    <section class="section alt" id="tools"></section>
+    <section class="section" id="enroll"></section>
+    <section class="section alt" id="student"></section>
+    <section class="section" id="faq"></section>
+  </main>
+
+  <footer class="site-footer" id="instructor"></footer>
+
+  <button class="to-top" aria-label="맨 위로">↑</button>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+  <script src="participate.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
