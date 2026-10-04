@@ -44,7 +44,7 @@ body {
   font-size: 1rem;
   line-height: 1.75;
   word-break: keep-all;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;   /* 띄어쓰기 없는 긴 일본어 제목도 좁은 화면에서 줄바꿈 */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -920,3 +920,5 @@ fieldset.ed-object, .ed-array { border: 1px solid var(--line); border-radius: 14
 .gh-help summary { cursor: pointer; color: var(--accent-2); font-weight: 700; font-size: .88rem; }
 .gh-help ol { margin: 8px 0 0; padding-left: 1.3em; font-size: .86rem; color: var(--muted); display: grid; gap: 4px; }
 .foot-msg { margin: 0 0 8px; }
+
+.grid > * { min-width: 0; }
